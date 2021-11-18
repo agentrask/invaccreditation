@@ -23,5 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 
-reportWebVitals.js
-setupTest.js
+src/reportWebVitals.js
+src/setupTest.js
+
+package-lock.json
