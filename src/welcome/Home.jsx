@@ -1,6 +1,6 @@
 import React from "react";
 import "./welcome.css"
-import logo from "../logo.svg";
+import logo from "../assets/logo.svg";
 
 export default class Home extends React.Component {
   render() {
@@ -9,7 +9,6 @@ export default class Home extends React.Component {
         <div className="container">
         <img src={logo}/>
           <div className="header">
-            {/*<h2>Invaccredition</h2>*/}
             <p>Get an investor accredition in less than 24 hours at <strong>$50</strong>.</p>
             <p>A licensed CPA will verify your application.</p>
           </div>
