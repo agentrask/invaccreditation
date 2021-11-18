@@ -1,3 +1,8 @@
+.container {
+  width: 470px;
+  margin: 30px auto;
+}
+
 h2 {
   font-family: 'Special Elite', cursive;
   color: black;
@@ -6,9 +11,14 @@ h2 {
 
 p {
   margin-top: 20px;
+  color: #707070;
 }
 
-label {
+::placeholder {
+  font-size: 16px;
+}
+
+label  {
   margin-top: 25px;
   font-weight: bold;
   color: black;
@@ -29,10 +39,7 @@ input[type=text]{
   margin-top: 15px;
   padding: 15px;
   font-size: 17px;
-}
-
-input:focus {
-  border: 2px;
+  border-color: gray;
 }
 
 form {
@@ -67,18 +74,24 @@ button[type=submit] {
   text-align: center;
 }
 
-.reason button[type=radio] {
-  float: left;
-  width: 60px;
+.reason {
+  margin-top: 25px;
+}
+
+.reason input[type=radio] {
+  width: 30px;
+  height: 30px;
 }
 
 .reason label {
-  float: right;
+  font-weight: normal;
+  display: inline;
+  margin-left: 30px;
 }
 
 .footer {
   margin-top: 30px;
   border-top: 1px solid;
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
 }
