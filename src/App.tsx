@@ -1,4 +1,4 @@
-import Home from './welcome/Home'
+import Home from './boarding/Home';
 import './App.css';
 
 function App() {
