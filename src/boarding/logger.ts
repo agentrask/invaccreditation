@@ -16,12 +16,10 @@ export const error = (err: Error | string, code = 0) => {
 
   const text = err instanceof Error ? err : chalk.red.bold("ERROR: ") + err;
   loggerStdout += `${removeANSI(text.toString())}\n`;
-
   console.error(text);
   console.log(
     "If you think this is a bug, you can report it: https://github.com/benawad/destiny/issues"
   );
-
   process.exit(code);
 };
 
@@ -30,7 +28,6 @@ export const info = (msg: string) => {
 
   const text = chalk.green.bold("INFO: ") + msg;
   loggerStdout += `${removeANSI(text)}\n`;
-
   console.info(text);
 };
 
@@ -38,7 +35,6 @@ export const log = (msg: string) => {
   if (process.env.NODE_ENV === "test") return;
 
   loggerStdout += `${removeANSI(msg)}\n`;
-
   console.log(msg);
 };
 
@@ -71,15 +67,13 @@ export const debug = (msg: string, ...data: any[]) => {
       }ms `
     ) +
     msg;
-
   loggerStdout += `${removeANSI(text)}\n`;
   console.info(text);
-
   lastDebugTimestamp = currentDebugTimestamp;
 
   if (data.length > 0) {
     console.group();
-    data.forEach(d => {
+    data.forEach((d) => {
       console.dir(d, {
         depth: Infinity,
         maxArrayLength: Infinity,
@@ -100,9 +94,7 @@ export const writeDebugStdout = (filePath: string) => {
     error(
       `The debug file output already exist "${resolvedFilePath}".\nPlease give a path to a non existing file.`
     );
-
   fs.writeFileSync(resolvedFilePath, loggerStdout, "utf8");
-
   debug(`stdout written in "${resolvedFilePath}"`);
 };
 
